@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPlugin');
 const commonConfig = require('./webpack.common');
 const packageJson = require('../package.json');
+const path = require('path');
 
 const devConfig = {
   mode: 'development',
@@ -17,7 +18,7 @@ const devConfig = {
       name: 'auth',
       filename: 'remoteEntry.js',
       exposes: {
-        './AuthApp': './src/bootstrap'
+        './AuthApp': './src/bootstrap.tsx'
       },
       shared: packageJson.dependencies
     }),

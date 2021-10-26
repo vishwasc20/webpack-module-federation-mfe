@@ -1,3 +1,4 @@
+// @ts-ignore
 import { mount } from "auth/AuthApp";
 import React, { useRef, useEffect } from "react";
 

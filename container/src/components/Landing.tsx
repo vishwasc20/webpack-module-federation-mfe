@@ -198,7 +198,7 @@ export default function Album() {
               <ul>
                 {footer.description.map((item) => (
                   <li key={item}>
-                    <span variant="subtitle1" color="textSecondary">
+                    <span color="textSecondary">
                       {item}
                     </span>
                   </li>

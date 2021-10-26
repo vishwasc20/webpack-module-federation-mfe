@@ -9,7 +9,7 @@ export default () => {
   return (
     <BrowserRouter>
       <div>
-        <Header />
+        <Header signedIn={false} onSignOut={undefined}/>
         <Switch>
           <Route exact path="/login" component={AuthApp}></Route>
           <Route exact path="/coupon" component={AuthApp}></Route>

@@ -1,15 +1,15 @@
 import React, { useReducer } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 
-export default function CouponHome(props) {
-  const useStyles = makeStyles((theme) => ({
+export default function CouponHome() {
+  const useStyles = makeStyles(() => ({
     comingSoonImg: {
       display: "flex",
       justifyContent: "center",
       padding: "2rem",
     },
   }));
-  const classes = useStyles(classes);
+  const classes = useStyles();
   
   return (
     <div className={classes.comingSoonImg}>

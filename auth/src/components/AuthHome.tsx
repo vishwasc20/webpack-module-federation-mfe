@@ -11,7 +11,7 @@ import {
 
 import { makeStyles } from "@material-ui/core/styles";
 
-export default function AuthHome(props) {
+export default function AuthHome() {
   const history = useHistory();
   const useStyles = makeStyles((theme) => ({
     loginDiv: {
@@ -57,7 +57,7 @@ export default function AuthHome(props) {
     },
   }));
 
-  const handleSubmit = (evt) => {
+  const handleSubmit = (evt: React.FormEvent<HTMLFormElement>) => {
     evt.preventDefault();
     history.goBack();
   };

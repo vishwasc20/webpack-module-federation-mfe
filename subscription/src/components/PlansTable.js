@@ -14,6 +14,7 @@ import Typography from '@material-ui/core/Typography';
 import Paper from '@material-ui/core/Paper';
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
+import useStateOpen from '../custom-hooks/useStateOpen';
 
 const useRowStyles = makeStyles({
   root: {
@@ -39,7 +40,7 @@ function createData(name, price, startDate, endDate, selectedDays) {
 
 function Row(props) {
   const { row } = props;
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useStateOpen(false);
   const classes = useRowStyles();
 
   return (
